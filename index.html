@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+  	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<title>David Melhart</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&subset=latin-ext" rel="stylesheet" type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata&subset=latin-ext" rel="stylesheet" type='text/css'>
+
+</head>
+
+<body>
+
+	<div id="main_border">
+
+		<div id="mobile_header" class="menu_hidden">
+			<a href="index.html"><img id="logo" data-bind="attr: { src: logo.logoUrl, alt: logo.logoDesc }"></a>
+			<nav class="navigation">
+				<!-- ko foreach: navi -->
+					<a data-bind="attr: { href: url }">
+						<span class="nav_item" data-bind="html: title"></span>
+					</a>
+				<!-- /ko -->
+				<div class="moblie_social">
+					<!-- ko foreach: social -->
+						<a data-bind="attr: { href: url }">
+								<img class="social_icon" data-bind="attr: { src: icon, alt: desc }">
+						</a>
+					<!-- /ko -->
+				</div>
+			</nav>
+			<div class="hamburger" data-bind="click: menuToggle">
+				<img src="img/hamburger-opened.png"><div><h2>David</h2><h2>Melhart</h2></div>
+			</div>
+		</div>
+
+		<div id="header_container">
+			<div id="main_navigation">
+				<div class="logo_container">
+					<a href="index.html"><img id="logo" data-bind="attr: { src: logo.logoUrl, alt: logo.logoDesc }"></a>
+				</div>
+				<nav class="navigation">
+					<!-- ko foreach: navi -->
+						<a data-bind="attr: { href: url }">
+							<span class="nav_item" data-bind="html: title"></span>
+							<span class="nav_highlight" data-bind="html: title"></span>
+						</a>
+					<!-- /ko -->
+				</nav>
+
+			</div>				
+				<nav id="navi_social">
+					<!-- ko foreach: social -->
+						<a data-bind="attr: { href: url }">
+								<img class="social_icon_highlight" data-bind="attr: { src: highlight, alt: desc }">
+								<img class="social_icon" data-bind="attr: { src: icon, alt: desc }">
+						</a>
+					<!-- /ko -->
+				</nav>
+		</div>
+
+		<div class="main_content">
+			<div class="index_content">
+				<div class="index_image"></div>
+				<div class="index_descriptions">
+					<div class="index_block" id="block1">
+						<div class="line_container"><div class="line" id="line1"></div></div>
+						<p class="mobile_number">1.</p><p><strong>Restless Brain</strong> </br>
+							A magnificent brain that works restless on analysing problems and coming up with solutions.
+						</p>
+					</div>
+					<div class="index_block" id="block2">
+						<div class="line_container"><div class="line" id="line2"></div></div>
+						<p class="mobile_number">2.</p><p><strong>Heart of Gold</strong> </br>
+							A heart filled with passion towards games, great designs, and creative ideas.
+						</p>
+					</div>
+					<div class="index_block" id="block3">
+						<div class="line_container"><div class="line" id="line3"></div></div>
+						<p class="mobile_number">3.</p><p><strong>Belly full of Pizza</strong> </br>
+							A great hunger for knowledge that can only be temporarily soothed with home-made pizza.
+						</p>
+					</div>
+					<div class="index_block" id="block4">
+						<div class="line_container"><div class="line" id="line4"></div></div>
+						<p class="mobile_number">4.</p><p><strong>Magic Hands</strong> </br>
+							Magic hands that work tirelessly to realise better and better projects.
+						</p>
+					</div>
+					<div class="index_block" id="block5">
+						<div class="line_container"><div class="line" id="line5"></div></div>
+						<p class="mobile_number">5.</p><p><strong>Legs of Steel</strong> </br>
+							Legs of steel to be able to walk the extra mile.
+						</p>
+					</div>
+				</div>
+			</div>			
+		</div>	
+
+		<footer>
+			<p><a href="mailto:hello@davidmelhart.com?Subject=Hello" target="_top">David Melhart</a> © 2016</p>
+		</footer>
+	</div>
+
+
+
+</body>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/knockout.js"></script>
+
+	<script async src="js/app.js"></script>
+
+</html>
